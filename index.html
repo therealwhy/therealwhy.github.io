@@ -6,6 +6,38 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous">
     </script>
+    <style>
+      div {
+        font-size: 1em;
+        font-family: sans-serif;
+        display: inline-block;
+        border: 1px black solid;
+        border-radius: 10mm;
+        margin: .5em;
+        padding: .5em;
+        box-sizing: border-box;
+        background: transparent;
+      }
+
+      div:hover{
+        background: rgba(255, 255, 0, .2);
+      }
+
+      div.min {
+        font-size: .5em;
+        max-width: 2em;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        overflow: hidden;
+        float: right;
+        margin: 0 1px;
+      }
+
+      div.min span{
+        position: relative;
+        z-index: -1;
+      }
+    </style>
   </head>
   <body>
     <h1>Magic iPhone Sizer</h1>
