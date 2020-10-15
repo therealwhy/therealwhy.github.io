@@ -7,9 +7,11 @@
       crossorigin="anonymous">
     </script>
     <style>
+      body{
+        font-family: sans-serif;
+      }
       div {
         font-size: 1em;
-        font-family: sans-serif;
         display: inline-block;
         border: 1px black solid;
         border-radius: 5mm;
@@ -25,7 +27,7 @@
 
       div.min {
         border-radius: 2mm;
-        font-size: .5em;
+        font-size: .7em;
         max-width: 2em;
         writing-mode: vertical-rl;
         text-orientation: upright;
@@ -146,11 +148,14 @@
       });
       $('.zoom').on('click', (evt) => {
         zoom += .01;
+        // because floats are so inexact;
+        zoom = Math.round(zoom * 100, 0) /100
         $('button + span').text(zoom);
         $('section').css('zoom', zoom);
       });
       $('.shrink').on('click', (evt) => {
         zoom -= .01;
+        zoom = Math.round(zoom * 100, 0) /100
         $('button + span').text(zoom);
         $('section').css('zoom', zoom);
       });
